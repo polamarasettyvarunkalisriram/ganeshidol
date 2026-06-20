@@ -1,0 +1,99 @@
+.hero {
+  min-height: 100vh;
+  background: #FFFDF5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 60px 8%;
+  gap: 50px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 500px;
+  height: 650px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+  transition: 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+.hero h1 {
+  font-size: 72px;
+  line-height: 1.1;
+  color: #3D2B1F;
+  font-family: "Playfair Display", serif;
+}
+
+.hero h1 span {
+  color: #A05A00;
+  display: block;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #7A6A5F;
+  line-height: 1.8;
+  max-width: 550px;
+}
+
+.tagline {
+  display: inline-block;
+  background: #fff4e5;
+  color: #A05A00;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.shop-btn,
+.about-btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.shop-btn {
+  background: #FF9933;
+  color: white;
+  border: none;
+}
+
+.shop-btn:hover {
+  background: #D4AF37;
+}
+
+.about-btn {
+  background: transparent;
+  border: 2px solid #D4AF37;
+  color: #A05A00;
+}

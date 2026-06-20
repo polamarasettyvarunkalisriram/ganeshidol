@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 80px;
+
+    background:#FFFDF5;
+
+    border-bottom:1px solid #e7d7b8;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Logo */
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-img{
+    width:65px;
+    height:65px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #D4AF37;
+    transition:0.3s;
+}
+
+.logo-img:hover{
+    transform:rotate(5deg) scale(1.05);
+}
+
+.logo-text h2{
+    font-family:'Playfair Display',serif;
+    color:#A05A00;
+    font-size:28px;
+    margin:0;
+}
+
+.logo-text span{
+    font-size:12px;
+    color:#777;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* Navigation */
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    position:relative;
+    text-decoration:none;
+    color:#3D2B1F;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#A05A00;
+}
+
+/* Gold Underline Animation */
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #FF9933,
+        #D4AF37
+    );
+
+    transition:0.4s ease;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* Right Side */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.ganesh-badge{
+    background:linear-gradient(
+        135deg,
+        #FF9933,
+        #D4AF37
+    );
+
+    color:white;
+    padding:10px 16px;
+    border-radius:30px;
+
+    font-size:14px;
+    font-weight:600;
+
+    animation:pulse 2s infinite;
+}
+
+/* WhatsApp */
+
+.whatsapp-btn{
+    text-decoration:none;
+
+    background:#25D366;
+    color:white;
+
+    padding:10px 20px;
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(37,211,102,.25);
+}
+
+/* Pulse Animation */
+
+@keyframes pulse{
+
+    0%{
+        box-shadow:0 0 0 0 rgba(255,153,51,.5);
+    }
+
+    70%{
+        box-shadow:0 0 0 12px rgba(255,153,51,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(255,153,51,0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .navbar{
+        padding:15px 30px;
+    }
+
+    .nav-right{
+        display:none;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .logo-text h2{
+        font-size:24px;
+    }
+}
