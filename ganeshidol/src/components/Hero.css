@@ -97,3 +97,107 @@
   border: 2px solid #D4AF37;
   color: #A05A00;
 }
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+@media (max-width: 992px) {
+  .hero {
+    padding: 50px 5%;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-image img {
+    width: 380px;
+    height: 520px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   TABLET + LARGE MOBILE (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h1 span {
+    display: inline;
+  }
+
+  .hero p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    width: 320px;
+    height: 420px;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .tagline {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .shop-btn,
+  .about-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 340px;
+    border-radius: 15px;
+  }
+}
